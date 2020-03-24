@@ -25,7 +25,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     uid = ShortUUIDField(primary_key=True)
     email = models.EmailField(unique=True,null=True)
     username = models.CharField(max_length=20, unique=True)
-    password = models.CharField(max_length=50)
+    password = models.CharField(max_length=200)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     joined_date = models.DateTimeField(auto_now_add=True)
